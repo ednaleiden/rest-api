@@ -11,20 +11,10 @@ import java.util.stream.Collectors;
 public class ProductoRepository {
     private List<Product> productos = new ArrayList<>();
 
-    public void crearProductos(){
 
-        productos = List.of(
-               new Product( 1,"producto 01",5,1000),
-                new Product( 2,"producto 02",5,1000),
-                new Product( 3,"producto 03",5,1000),
-                new Product( 4,"producto 04",5,1000),
-                new Product( 5,"producto 05",5,1000),
-                new Product( 6,"producto 06",5,1000),
-                new Product( 7,"producto 07",5,1000),
-                new Product( 8,"producto 08",5,1000),
-                new Product( 9,"producto 09",5,1000)
 
-        );
+    public ProductoRepository(List<Product> productos) {
+        this.productos = productos;
     }
 
     public List<Product> getAllProductos() {
